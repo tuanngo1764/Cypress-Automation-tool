@@ -1,0 +1,34 @@
+{
+  "name": "CypressLevel1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:version": "cypress version",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "cy:build": "echo start tsc && tsc --project cypress/tsconfig.json && echo done tsc",
+    "cy:run-record": "cypress run --record --key e1495c66-a964-4b6e-81fe-5b579a635027",
+    "cy:run-record-parallel": "cypress run --record --parallel --ci-build-id $BUILD_TAG",
+    "cy:run:evernote-app": "cypress run --spec 'cypress/integration/evernote-app/*.spec.js'",
+    "cy:run:evernote-app:chrome": "cypress run --spec 'cypress/integration/evernote-app/*.spec.js' --browser chrome",
+    "cy:run:evernote-app:firefox": "cypress run --spec 'cypress/integration/evernote-app/*.spec.js' --browser firefox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@applitools/eyes-cypress": "^3.17.0",
+    "cypress": "^3.8.3",
+    "cypress-tags": "0.0.17",
+    "mocha": "^8.2.1"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^1.3.0",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0",
+    "typescript": "^4.1.3"
+  }
+}
